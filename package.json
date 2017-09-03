@@ -1,0 +1,34 @@
+{
+  "name": "sushi-bar-fe",
+  "version": "1.0.0",
+  "description": "SushiBar Front End",
+  "main": "index.js",
+  "scripts": {
+    "webpack": "webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/egch/sushi-bar-FE.git"
+  },
+  "keywords": [
+    "sushibar",
+    "ReactJS"
+  ],
+  "author": "Enrico Giurin",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/egch/sushi-bar-FE/issues"
+  },
+  "homepage": "https://github.com/egch/sushi-bar-FE#readme",
+  "dependencies": {
+    "react": "^15.6.1",
+    "react-dom": "^15.6.1"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "webpack": "^3.5.5"
+  }
+}
