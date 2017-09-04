@@ -1,21 +1,18 @@
-<!-- index.html -->
+<!-- reference: https://scotch.io/tutorials/submitting-ajax-forms-with-jquery -->
 
 <!doctype html>
 <html>
 <head>
     <title>Registration to sushi bar</title>
-    <!--<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css"> --><!-- load bootstrap via CDN -->
     <link href="node_modules/bootstrap/dist/css/bootstrap.min.css" media="all" rel="stylesheet" />
-
-    <script src="node_modules/jquery/dist/jquery.min.js"></script> <!-- load jquery via CDN -->
-    <script src="js/registration.js"></script> <!-- load our javascript file -->
+    <script src="node_modules/jquery/dist/jquery.min.js"></script> 
+    <script src="js/registration.js"></script>
 </head>
 <body>
 <div class="col-sm-6 col-sm-offset-3">
 
     <h1>Registration to sushi bar</h1>
 
-    <!-- OUR FORM -->
     <form method="POST">
 
         <!-- NAME -->
@@ -32,8 +29,7 @@
             <!-- errors will go here -->
         </div>
 
-        <!-- SUPERHERO ALIAS -->
-        <div id="superhero-group" class="form-group">
+        <div id="password-group" class="form-group">
             <label for="password">Password</label>
             <input type="password" class="form-control" name="password" >
             <!-- errors will go here -->
