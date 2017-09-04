@@ -1,10 +1,13 @@
-import React from 'react';
-import {render} from 'react-dom';
+/**
+ * Super simple client side application that mounts React
+ *
+ */
 
-class App extends React.Component {
-  render () {
-    return <p> Hello React!</p>;
-  }
-}
+const React = require('react');
+const ReactDOM = require('react-dom');
 
-render(<App/>, document.getElementById('app'));
+ReactDOM.render(
+  <h1>Registration to sushibar</h1>,
+  document.getElementById('react')
+);
+
