@@ -5,7 +5,7 @@
 <head>
     <title>Registration to sushi bar</title>
     <link href="node_modules/bootstrap/dist/css/bootstrap.min.css" media="all" rel="stylesheet" />
-    <script src="node_modules/jquery/dist/jquery.min.js"></script> 
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
     <script src="js/registration.js"></script>
 </head>
 <body>
@@ -31,9 +31,17 @@
 
         <div id="password-group" class="form-group">
             <label for="password">Password</label>
-            <input type="password" class="form-control" name="password" >
+            <input type="password" class="form-control" name="password" id="password" >
             <!-- errors will go here -->
         </div>
+
+        <div id="password-group" class="form-group">
+            <label for="confirm_password">Confirm password</label>
+            <input type="password" class="form-control" name="confirm_password" id="confirm_password" >
+            <!-- errors will go here -->
+        </div>
+
+        <span id='message'></span>
 
         <button type="submit" class="btn btn-success">Submit <span class="fa fa-arrow-right"></span></button>
 

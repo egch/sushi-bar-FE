@@ -1,4 +1,4 @@
-// reference: https://scotch.io/tutorials/submitting-ajax-forms-with-jquery
+  // reference: https://scotch.io/tutorials/submitting-ajax-forms-with-jquery
 $(document).ready(function() {
 
     // process the form
@@ -10,23 +10,30 @@ $(document).ready(function() {
             'password'    : $('input[name=password]').val()
         };
 
-    
+        $('#password, #confirm_password').on('keyup', function () {
+        if ($('#password').val() == $('#confirm_password').val()) {
+            $('#message').html('Matching').css('color', 'green');
+        } else
+            $('#message').html('Not Matching').css('color', 'red');
+        });
+
+
         $.ajax({
-            type        : 'POST', 
+            type        : 'POST',
             url         : 'http://localhost:8080/registration',
-            headers: { 
+            headers: {
                 'Accept': 'application/json',
-                'Content-Type': 'application/json' 
+                'Content-Type': 'application/json'
              },
-            data        : JSON.stringify(formData), 
-            dataType    : 'json', 
+            data        : JSON.stringify(formData),
+            dataType    : 'json',
                         encode          : true
         })
             // using the done promise callback
             .done(function(data) {
 
                 // log data to the console so we can see
-                console.log(data); 
+                console.log(data);
 
                 // here we will handle errors and validation messages
             });
