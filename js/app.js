@@ -12,6 +12,7 @@ class Example extends React.Component {
     this.state = { user: {} };
     this.onSubmit = this.handleSubmit.bind(this);
   }
+
   handleSubmit(e) {
     e.preventDefault();
     var self = this;
@@ -21,13 +22,14 @@ class Example extends React.Component {
                         'Content-Type': 'application/json'
                     }),
         body: JSON.stringify({
-        'username': 'a',
-         'password': 'b',
-        'email': 'a@a.b'
-        })
+                username: document.getElementById('username').value,
+        		email: document.getElementById('email').value,
+        		password: document.getElementById('password').value
+        	})
 
       })
       .then(function(response) {
+        console.log('waiting for the answer...')
         return response.json()
       }).then(function(body) {
         console.log(body);
@@ -36,9 +38,9 @@ class Example extends React.Component {
   render() {
     return (
       <form onSubmit={this.onSubmit}>
-        <input type="text" placeholder="username" ref="name"/>
-        <input type="text" placeholder="email" ref="email"/>
-        <input type="password" placeholder="password" ref="password"/>
+        <input type="text" placeholder="username" id="username"/>
+        <input type="text" placeholder="email" id="email"/>
+        <input type="password" placeholder="password" id="password"/>
 
 
         <input type="submit" />
