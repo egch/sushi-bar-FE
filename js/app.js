@@ -21,32 +21,35 @@ class Example extends React.Component {
         headers: new Headers({
                         'Content-Type': 'application/json'
                     }),
-        body: JSON.stringify({
-                username: document.getElementById('username').value,
-        		email: document.getElementById('email').value,
-        		password: document.getElementById('password').value
-        	})
 
-      })
-      .then(function(response) {
-        console.log('waiting for the answer...')
-        return response.json()
-      }).then(function(body) {
+        body: JSON.stringify({
+            username: document.getElementById('username').value,
+            email: document.getElementById('email').value,
+            password: document.getElementById('password').value
+        })
+    }).then(function(body) {
         console.log(body);
-      });
+    });
   }
   render() {
     return (
-      <form onSubmit={this.onSubmit}>
-        <input type="text" placeholder="username" id="username"/>
-        <input type="text" placeholder="email" id="email"/>
-        <input type="password" placeholder="password" id="password"/>
-
-
-        <input type="submit" />
-      </form>
+        <form onSubmit={this.onSubmit}>
+            <div className="form-group">
+                <label for="username">Username:</label>
+                <input type="text" className="form-control" id="username"/>
+            </div>
+            <div className="form-group">
+                <label for="email">Email address:</label>
+                <input type="email" className="form-control" id="email"/>
+            </div>
+            <div className="form-group">
+                <label for="password">Password:</label>
+                <input type="password" className="form-control" id="password"/>
+            </div>
+            <button type="submit" className="btn btn-default">Submit</button>
+        </form>
     );
   }
 }
 
-ReactDOM.render(<Example/>, document.getElementById('react'));
+ReactDOM.render(<Example/>, document.getElementById('form'));
