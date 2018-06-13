@@ -3,13 +3,12 @@ Front End of the SushiBar application
 
 # How to install
 
-1. *npm install*
-1. *npm run webpack*
+1. *npm install --save*
 
 
-# Start the http server
-1. *sudo python -m SimpleHTTPServer 90*
+# How to start
+1. *npm start*
 
 
 # Access to the application
-1. http://localhost:90
+1. http://localhost:3000
