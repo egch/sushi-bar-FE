@@ -3,12 +3,12 @@ Front End of the SushiBar application
 
 # How to install
 
-1. *npm install --save*
+ *npm install --save*
 
 
 # How to start
-1. *npm start*
+ *npm start*
 
 
 # Access to the application
-1. http://localhost:3000
+ http://localhost:3000
